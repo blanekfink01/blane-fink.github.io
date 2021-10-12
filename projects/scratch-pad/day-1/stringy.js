@@ -82,8 +82,13 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-    
+    let str = string.toLowerCase();
+    char = char.toLowerCase();
+    if (str[0] === char) {
+        return true;
+    } else {
+        return false;
+    }
 
     // YOUR CODE ABOVE HERE //
 }
