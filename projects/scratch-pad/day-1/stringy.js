@@ -195,7 +195,13 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    if (stringOne > stringTwo) {
+        return 1;
+    } else if (stringTwo > stringOne) {
+        return -1;
+    } else {
+        return 0;
+    }
 
 
 
