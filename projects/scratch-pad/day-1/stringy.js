@@ -57,14 +57,9 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-    var str = string.toLowerCase();
-    str = str.split(''); // turns the lowercase string into an array
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === ' ') { // change all blank space elements to hyphens
-            str[i] = '-';
-        }
-    }
-    return str.join(''); // return array joined back as string
+    var str = string.toLowerCase(); // makes it lowercase
+    str = str.split(' '); // separates words
+    return str.join('-'); // joins elements by hyphen
     // YOUR CODE ABOVE HERE //
 }
 
@@ -107,7 +102,13 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+    let str = string.toLowerCase();
+    char = char.toLowerCase();
+    if (str[str.length - 1] === char) {
+        return true;
+    } else {
+        return false;
+    }
 
 
     // YOUR CODE ABOVE HERE //
@@ -120,7 +121,7 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    return stringOne + stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
@@ -139,7 +140,7 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+    return args.join('');
 
     // YOUR CODE ABOVE HERE //
 }
