@@ -21,9 +21,14 @@
 
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
+    let arr = input.split('');
+    let reverseChars = [];
+    while (arr.length > 0) {
+      let val = arr.pop();
+      reverseChars.push(val);
+    }
+    let reverseString = reverseChars.join('');
+    return reverseString;
     
     // YOUR CODE GOES ABOVE HERE //
 }
