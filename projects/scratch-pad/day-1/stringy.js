@@ -14,7 +14,7 @@
  */
 function length(string) {
     // YOUR CODE BELOW HERE //
-    
+    return string.length;
 
 
     // YOUR CODE ABOVE HERE //
@@ -25,7 +25,7 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-
+    return string.toLowerCase();
 
 
     // YOUR CODE ABOVE HERE //
@@ -36,7 +36,7 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
+    return string.toUpperCase();
 
 
     // YOUR CODE ABOVE HERE //
@@ -57,9 +57,14 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+    var str = string.toLowerCase();
+    str = str.split(''); // turns the lowercase string into an array
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === ' ') { // change all blank space elements to hyphens
+            str[i] = '-';
+        }
+    }
+    return str.join(''); // return array joined back as string
     // YOUR CODE ABOVE HERE //
 }
 
