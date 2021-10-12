@@ -156,7 +156,10 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    if (stringOne.length > stringTwo.length) {
+        return stringOne;
+    }
+    return stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
@@ -171,9 +174,14 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
-
+    // why does it compare like this? i dont know
+    if (stringOne > stringTwo) {
+        return -1;
+    } else if (stringTwo > stringOne) {
+        return 1;
+    } else {
+        return 0;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
