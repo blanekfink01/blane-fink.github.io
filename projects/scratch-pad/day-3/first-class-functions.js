@@ -67,7 +67,11 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+    return function(string) {
+        let testCharsLength = endsWith.length;
+        let endChars = string.slice(-testCharsLength);
+        return endsWith.toLowerCase() === endChars.toLowerCase();
+    }
     
     
     
