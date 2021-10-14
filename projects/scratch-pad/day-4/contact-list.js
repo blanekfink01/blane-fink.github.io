@@ -35,7 +35,11 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
+    return {
+        'id': id,
+        'nameFirst': nameFirst,
+        'nameLast': nameLast,
+    };
 } 
 
 
