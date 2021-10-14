@@ -23,9 +23,20 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
+    // i: integers
+    // o: array with all integers between parameters
+    // edge case: if start > end return range in reverse order
+    const range = [];
+    if (end > start) {
+        for (let i = start; i <= end; i++) {
+            range.push(i);
+        }
+    } else {
+        for (let i = start; i >= end; i--) {
+            range.push(i);
+        }
+    }
+    return range;
     
     // YOUR CODE GOES ABOVE HERE //
 }
