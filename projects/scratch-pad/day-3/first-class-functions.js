@@ -13,7 +13,10 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    const greaterThanBase = function(value) {
+        return value > base;
+    }
+    return greaterThanBase;
     
     
     
@@ -27,7 +30,10 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    const lesserThanBase = function(value) {
+        return value < base;
+    }
+    return lesserThanBase;
     
     
     
@@ -41,7 +47,13 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+    return function(value) {
+        // will cut x characters from start of value where x is length of chars in startsWith
+        let x = startsWith.length;
+        var startOfValue = value.slice(0, x); // cuts the right amount of char from the string
+       
+        return startOfValue.toLowerCase() === startsWith.toLowerCase();
+    }
     
     
     
