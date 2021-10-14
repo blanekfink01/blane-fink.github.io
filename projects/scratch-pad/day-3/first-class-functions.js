@@ -87,8 +87,11 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
+    const modifiedStrings = [];
+    for (let i = 0; i < strings.length; i++) {
+        modifiedStrings.push(modify(strings[i]));
+    }
+    return modifiedStrings;
     
     
     // YOUR CODE ABOVE HERE //
