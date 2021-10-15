@@ -66,10 +66,18 @@ function makeContactList() {
             }
         },
         removeContact: function(contact) {
-
+            for (let i = 0; i < contacts.length; i++) {
+                if (contacts[i].nameFirst === contact.nameFirst && contacts[i].nameLast === contact.nameLast) {
+                    contacts.splice(i, 1);
+                }
+            }
         },
         printAllContactNames: function() {
-            
+            let names = `${contacts[0].nameFirst} ${contacts[0].nameLast}`;
+            for (let i = 1; i < contacts.length; i++) {
+            names += `\n${contacts[i].nameFirst} ${contacts[i].nameLast}`;
+            }
+            return names;
         }
     }
 }
