@@ -86,9 +86,27 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
-
+// 1. [ x] Create a variable named `animals` and assign it to an empty array.
+// 2. [ x] `push` our `animal` that we created to `animals`. You should now see your first animal appear on your `index.html` page!
+// 3. [ x] `console.log` `animals`. What does it look like?
+// 4. [ x] Create a variable called `duck` and assign it to the data:
+//  - `{ species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] }`
+// 5. [ x] `push` `duck` to `animals`
+// 6. [ x] `console.log` `animals`. What does it look like?
+// 7. [ x] Create two more animal objects each with a species, a name, and at least two sounds sounds and add each one of them to `animals.
+// 8. [ x] `console.log` `animals`, and, `console.log` the length of `animals`. Is everything looking right?
+var animals = [];
+animals.push(animal);
+console.log(animals);
+const duck = { species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] };
+animals.push(duck);
+console.log(animals);
+const elephant = { species: 'elephant', name: 'Earl', noises: ['pffffft', 'splash'] };
+const giraffe = { species: 'giraffe', name: 'Jerald', noises: ['munch', 'lick'] };
+animals.push(elephant);
+animals.push(giraffe);
+console.log(animals);
+console.log(animals.length);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
