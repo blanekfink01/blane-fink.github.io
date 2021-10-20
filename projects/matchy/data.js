@@ -31,19 +31,24 @@ console.log(animal);
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 // 1. [ x] Create a variable named `noises` and assign it to an empty array.
-// 2. [ ] Using **bracket notation** give `noises` it's first element. A string representing a sound your animal might make.
-// 3. [ ] Using an array function add another noise to the end of `noises`.
-// 4. [ ] Go to the array documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array?redirectlocale=en-US
-// 5. [ ] Look through the functions until you find the one that will place an element at the begining of the array.
-// 6. [ ] Add an element to `noises` using this function.
-// 7. [ ] Using **bracket syntax** again, add another element to the end of `noises`. Make sure that the way you do this step would work no matter how many elements `noises` had. In other words, don't hard code the position of the new element.
-// 8. [ ] `console.log` the length of `noises`
-// 9. [ ] `console.log` the last element in `noises` again without hard coding the index.
-// 10. [ ] `console.log` the whole array.
-// 11. [ ] Does it look right?
+// 2. [ x] Using **bracket notation** give `noises` it's first element. A string representing a sound your animal might make.
+// 3. [ x] Using an array function add another noise to the end of `noises`.
+// 4. [ x] Go to the array documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array?redirectlocale=en-US
+// 5. [ x] Look through the functions until you find the one that will place an element at the begining of the array.
+// 6. [ x] Add an element to `noises` using this function.
+// 7. [ x] Using **bracket syntax** again, add another element to the end of `noises`. Make sure that the way you do this step would work no matter how many elements `noises` had. In other words, don't hard code the position of the new element.
+// 8. [ x] `console.log` the length of `noises`
+// 9. [ x] `console.log` the last element in `noises` again without hard coding the index.
+// 10. [ x] `console.log` the whole array.
+// 11. [ x] Does it look right?
 var noises = [];
-// noises[0] = 
-
+noises[0] = 'roar';
+noises.push('mrow');
+noises.unshift('boo');
+noises[noises.length] = 'squawk';
+console.log(noises.length);
+console.log(noises[noises.length-1]);
+console.log(noises);
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
