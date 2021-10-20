@@ -70,6 +70,9 @@ console.log(animal);
  *
  * *******************************************************************
  */
+// 1. [ dot notation or bracket notation] What are the different ways you can access properties on objects?
+// 2. [ you can only really access using the index in bracket notation or helper functions that do that] What are the different ways of accessing elements on  arrays?
+
 
 /* *******************************************************************
  * Step 5 - Take a Break!
