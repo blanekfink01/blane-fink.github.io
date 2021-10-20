@@ -110,9 +110,23 @@ console.log(animals.length);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
-
+// 1. [ x] Choose a data structure for this **list** of friends.
+// 2. [ x] Write a comment in your code that explains why you chose this data structure.
+// 3. [ x] Create a variable called `friends` and assign it to the data structure that you chose.
+// 4. [ x] Take a look at the documentation for `Math.random` here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+// 5. [ x] Write a function called `getRandom` that takes our `animals` array and returns  a random `index` of the input array, using `Math.random`
+// 6. [ x] Using a random index from this function that you just created, get a random animal and add its `name` to `friends`.
+// 7. [ x] `console.log` `friends`.
+// 8. [ x] Using **bracket notation**, add the `friends` list as a **property** also named `friends` on one of the animals in the `animals` array
+// 9. [ ] `console.log` your work.
+var friends = []; // list of objects
+function getRandom(animals) {
+  return Math.floor(Math.random() * animals.length);
+}
+friends.push(animals[getRandom(animals)]['name']);
+console.log(friends);
+animals[0]['friends'] = friends;
+console.log(animals);
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
  * move onto Part 2 in the file called "functions.js"
