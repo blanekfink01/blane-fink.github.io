@@ -53,8 +53,13 @@ console.log(noises);
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+// 1. [ x] Using **bracket syntax**, assign the `noises` property on `animal` to our new `noises` array.
+// 2. [ x] Using any syntax add another noise to the `noises` property on `animal`.
+// 3. [ x] `console.log` `animal`.
+// 4. [ x] Does it look right?
+animal.noises = noises;
+animal.noises.push('awooga');
+console.log(animal);
 
 /* *******************************************************************
  * Step 4 - Review
