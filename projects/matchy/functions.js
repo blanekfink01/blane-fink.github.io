@@ -69,7 +69,17 @@ function remove(animals, name) {
 //     - Has a **unique** name, meaning no other animals have that name.
 //     - Adds this new Object to the `animals` Array, **only** if all the other conditions pass.
 //     - Make sure it works.
-
+function add(animals, animal) {
+    if (animal.name.length > 0 && animal.species.length > 0) { // checks for name and species
+        // now check if it's unique
+        for (let i = 0; i < animals.length; i++) {
+            if(animals[i].name.toLowerCase() === animal.name.toLowerCase()) {
+                return; // returns if the name is not unique
+            }
+        }
+        animals.push(animal); // push to array since name IS logically unique and whatnot
+    }
+}
 
 /**
  * You did it! You're all done with Matchy!
