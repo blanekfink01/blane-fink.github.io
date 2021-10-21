@@ -36,7 +36,13 @@ return null;
 //     - If an animal with that name exists within the `animals` Array, replace it's entire Object with the replacement Object.
 //     - Otherwise do nothing.
 //   2. Preview the `index.html` page to test it on the website.
-
+function replace(animals, name, replacementAnimal) {
+    for (let i = 0; i < animals.length; i++) {
+        if(animals[i].name.toLowerCase() === name.toLowerCase()) {
+            animals[i] = replacementAnimal;
+        }
+    }
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
