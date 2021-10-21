@@ -19,7 +19,14 @@
 //   - Looks through the `animals` Array, and returns the animal's Object if an animal with that name exists.
 //   - Returns `null` if no animal with that name exists
 // 3. Use the search bar at the top of the page to make sure your function works.
-
+function search(animals, name) {
+for (let i = 0; i < animals.length; i++) {
+    if(animals[i].name.toLowerCase() === name.toLowerCase()) {
+        return animals[i];
+    }
+}
+return null;
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
