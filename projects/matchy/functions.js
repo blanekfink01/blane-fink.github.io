@@ -51,7 +51,13 @@ function replace(animals, name, replacementAnimal) {
 // - Takes 2 parameters, an Array of animals, and a name of an animal on which to perform a search.
 // - If an animal with that name exists within the `animals` Array, remove it.
 // 2. Test that it works on the website.
-
+function remove(animals, name) {
+    for (let i = 0; i < animals.length; i++) {
+        if(animals[i].name.toLowerCase() === name.toLowerCase()) {
+            animals.splice(i, 1);
+        }
+    }
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
