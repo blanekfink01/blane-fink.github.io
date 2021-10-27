@@ -79,7 +79,11 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
-
+    let name = object.name.split('');
+    name[0] = name[0].toUpperCase();
+    let species = object.species.split('');
+    species[0] = species[0].toUpperCase();
+    return `${name.join('')} is a ${species.join('')}`;
 }
 
 //////////////////////////////////////////////////////////////////////
