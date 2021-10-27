@@ -69,7 +69,9 @@ function capitalizeAllWords(string) {
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
-    return `Welcome ${object.name}!`;
+    let name = object.name.split('');
+    name[0] = name[0].toUpperCase();
+    return `Welcome ${name.join('')}!`;
 }
 
 //////////////////////////////////////////////////////////////////////
