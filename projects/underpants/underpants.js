@@ -41,7 +41,14 @@ _.identity = val => val;
 * _.typeOf("javascript") -> "string"
 * _.typeOf([1,2,3]) -> "array"
 */
-
+_.typeOf = (val) => {
+    if (Array.isArray(val)) {
+        return 'array';
+    } else if (val === null) {
+        return 'null';
+    }
+    return typeof val;
+};
 
 /** _.first
 * Arguments:
@@ -60,7 +67,16 @@ _.identity = val => val;
 *   _.first(["a", "b", "c"], 1) -> "a"
 *   _.first(["a", "b", "c"], 2) -> ["a", "b"]
 */
-
+_.first = (arr, num) => {
+    if (!Array.isArray(arr) || arr.length === 0) { // not an array? return empty
+        return [];
+    } else if (num < 0 || num === NaN || num === undefined) { // if not a number or neg num ret 1st val
+        return arr[0];
+    } else {
+        // make fun happen
+    }
+    return 'zonk';
+}
 
 /** _.last
 * Arguments:
