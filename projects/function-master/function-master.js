@@ -91,7 +91,7 @@ function profileInfo(object) {
 //////////////////////////////////////////////////////////////////////
 
 function maybeNoises(object) {
-    if (Array.isArray(object.noises)) {
+    if (Array.isArray(object.noises) && object.noises.length > 0) {
         return object.noises.join(' ');
     }
     return 'there are no noises';
@@ -102,7 +102,14 @@ function maybeNoises(object) {
 //////////////////////////////////////////////////////////////////////
 
 function hasWord(string, word) {
-
+    const words = string.split(` `);
+    console.log('start', string, words, word, 'k')
+    for (let i = 0; i < words.length; i++) {
+        if (words[i] === word){
+            return true;
+        }
+    }
+    return false;
 }
 
 //////////////////////////////////////////////////////////////////////
