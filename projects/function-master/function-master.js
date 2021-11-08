@@ -141,7 +141,37 @@ function isFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function nonFriends(name, array) {
-
+    // return a list of names of people 'name' is not friends with
+    var nonFriends = []; // list of names of non-friends found
+    // need to aquire array of people that are friends of name from array
+    var friendsOfName = []; // working
+    for (let i = 0; i < array.length; i++) { // need to iterate until we aquire the user object's friends from the name string
+        if (array[i].name === name) {
+            friendsOfName = array[i].friends;
+        }
+    }
+    // then need to add all people in array that arent on the friends list
+    for (let i = 0; i < array.length; i++) { 
+        let user = array[i]; // will go through every user profile in array
+        let shouldPushUser = true;
+        // console.log('user', user);
+        // if user.name is not name, and it is not in the friendsOfName list, push it to nonfriends
+        if (user.name === name) {
+            shouldPushUser = false; // shouldnt push user because it is the name user
+        } else {
+            // iterate through friendsOfName and if any name matches the user's name it shouldnt be pushed to nonfriends
+            for (let j = 0; j < friendsOfName.length; j++) {
+                let friendName = friendsOfName[j];
+                if (friendName === user.name) { // then the user is a friend and shouldnt be pushed
+                    shouldPushUser = false;
+                }
+            }
+        }
+        if (shouldPushUser) {
+            nonFriends.push(user.name);
+        }
+    }
+    return nonFriends;
 }
 
 //////////////////////////////////////////////////////////////////////
