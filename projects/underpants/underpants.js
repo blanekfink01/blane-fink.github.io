@@ -95,7 +95,15 @@ _.first = (arr, num) => {
 *   _.last(["a", "b", "c"], 1) -> "c"
 *   _.last(["a", "b", "c"], 2) -> ["b", "c"]
 */
-
+_.last = (arr, num) => {
+    if (!Array.isArray(arr) || num < 0) { // if arr is !array return [] or num is neg
+        return [];
+    } else if (num === undefined || num === NaN || num <= 1) { // if num isnt a num or is 0 or 1 return last el
+        return arr[arr.length -1];
+    } else {
+        return arr.splice(-num); // the negative version of num would return x elements from end of array
+    }
+};
 
 /** _.indexOf
 * Arguments:
