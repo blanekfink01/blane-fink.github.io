@@ -179,7 +179,9 @@ function nonFriends(name, array) {
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
-
+    // Should update the property <key> on <object> with new <value>. If <key> does not exist on <object> create it.
+    object[key] = value;
+    return object;
 }
 
 //////////////////////////////////////////////////////////////////////
