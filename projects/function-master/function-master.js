@@ -200,7 +200,24 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
-    
+    // Should take an array and return an array with all the duplicates removed
+    const deduped = [];
+    // for loop on array that checks deduped for the value and if not there at the end of deduped loop, push
+    for (let i = 0; i < array.length; i++) {
+        // for every value in array we will check if it's a dupe
+        let val = array[i];
+        let isDupe = false;
+        for (let j = 0; j < deduped.length; j++) {
+            let dedupedVal = deduped[j];
+            if (dedupedVal === val) {
+                isDupe = true;
+            }
+        }
+        if (isDupe === false) {
+            deduped.push(val);
+        }
+    }
+    return deduped;
 }
 
 //////////////////////////////////////////////////////////////////////
