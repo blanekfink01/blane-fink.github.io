@@ -68,14 +68,14 @@ _.typeOf = (val) => {
 *   _.first(["a", "b", "c"], 2) -> ["a", "b"]
 */
 _.first = (arr, num) => {
-    if (!Array.isArray(arr) || arr.length === 0) { // not an array? return empty
+    if (!Array.isArray(arr) || arr.length === 0 || num < 0) { // not an array? return empty
         return [];
-    } else if (num < 0 || num === NaN || num === undefined) { // if not a number or neg num ret 1st val
+    } else if (num <= 1 || num === NaN || num === undefined) { // if not a number or neg num ret 1st val
         return arr[0];
     } else {
         // make fun happen
+        return arr.slice(0, num);
     }
-    return 'zonk';
 }
 
 /** _.last
