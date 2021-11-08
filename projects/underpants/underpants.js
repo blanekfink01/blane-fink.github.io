@@ -120,7 +120,14 @@ _.last = (arr, num) => {
 *   _.indexOf(["a","b","c"], "c") -> 2
 *   _.indexOf(["a","b","c"], "d") -> -1
 */
-
+_.indexOf = (arr, val) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === val) {
+            return i;
+        }
+    }
+    return -1;
+};
 
 /** _.contains
 * Arguments:
