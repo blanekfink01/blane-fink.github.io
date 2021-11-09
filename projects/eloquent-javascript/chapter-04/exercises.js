@@ -77,15 +77,43 @@ function reverseArrayInPlace(array) {
 // arrayToList /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function arrayToList() {
-
+/*
+EXAMPLE
+arr = [1,2,3]
+{
+  value: 1,
+  rest: {
+    value: 2,
+    rest: {
+      value: 3,
+      rest: null
+    }
+  }
+}
+*/
+function arrayToList(arr, rest) {
+  if (arr.length === 0) {
+    return rest;
+  } else if (rest === undefined) {
+    const list = {
+      value: arr.pop(),
+      rest: null
+    };
+    return arrayToList(arr, list);
+  } else {
+    const list = {
+      value: arr.pop(),
+      rest: rest
+    };
+    return arrayToList(arr, list);
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // listToArray /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function listToArray() {
+function listToArray(list, arr = []) {
 
 }
 
