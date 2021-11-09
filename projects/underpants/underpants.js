@@ -267,7 +267,18 @@ _.reject = (arr, func) => {
 *   }); -> [[2,4],[1,3,5]]
 }
 */
-
+_.partition = (arr, func) => {
+    const truthy = [];
+    const untruthy = [];
+    _.each(arr, (val, i, coll) => {
+        if (func(val, i, coll)) {
+            truthy.push(val);
+        } else {
+            untruthy.push(val);
+        }
+    });
+    return [truthy, untruthy];
+};
 
 /** _.map
 * Arguments:
