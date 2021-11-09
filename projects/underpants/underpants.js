@@ -339,7 +339,9 @@ _.pluck = (arrOfObj, property) => {
 *   _.every([2,4,6], function(e){return e % 2 === 0}) -> true
 *   _.every([1,2,3], function(e){return e % 2 === 0}) -> false
 */
-
+_.every = (coll, func) => {
+    // i need to plan every step of this with pseudocode before coding
+};
 
 /** _.some
 * Arguments:
