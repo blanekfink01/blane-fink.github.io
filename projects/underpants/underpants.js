@@ -143,7 +143,10 @@ _.indexOf = (arr, val) => {
 * Examples:
 *   _.contains([1,"two", 3.14], "two") -> true
 */
-
+_.contains = (arr, val) => {
+    let containsVal = _.indexOf(arr, val) > -1 ? true : false;
+    return containsVal;
+}
 
 /** _.each
 * Arguments:
