@@ -2,8 +2,36 @@
 // range ///////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function range() {
+function range(start, end, step) {
+  const rangeVals = [];
+  if (step === undefined) {
+    if (start < end) {
+      for (let i = start; i <= end; i++) {
+        rangeVals.push(i);
+      }
+    } else {
+      for (let i = end; i > start; i--) {
+        rangeVals.push(i);
+      }
+    }
+  } else {
+    if (step < 0 && start < end) {
+      return []; // bad loop
+    }
+    
+    if (start < end) {
+      for (let i = start; i <= end; i += step) {
+        rangeVals.push(i);
+      }
+    } else {
+      for (let i = end; i >= start; i += step) {
+        rangeVals.push(i);
+      }
+    }
+  }
 
+  console.log(start, end, rangeVals);
+  return rangeVals;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
