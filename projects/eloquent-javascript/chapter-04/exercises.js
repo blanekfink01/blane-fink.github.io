@@ -30,7 +30,6 @@ function range(start, end, step) {
     }
   }
 
-  console.log(start, end, rangeVals);
   return rangeVals;
 }
 
@@ -62,8 +61,16 @@ function reverseArray(array) { // NON-DESTRUCTIVELY
 // reverseArrayInPlace /////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function reverseArrayInPlace() {
-
+function reverseArrayInPlace(array) {
+  // reverse by mutating original array
+  const reversed = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+    reversed.push(array[i]);
+  }
+  for (let i = array.length - 1; i >= 0; i--) {
+    array[i] = reversed[i];
+  }
+  return array;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
