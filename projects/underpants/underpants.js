@@ -313,7 +313,11 @@ _.map = (coll, func) => {
 * Examples:
 *   _.pluck([{a: "one"}, {a: "two"}], "a") -> ["one", "two"]
 */
-
+_.pluck = (arrOfObj, property) => {
+    return _.map(arrOfObj, (obj, prop, arrOfObj) => {
+        return obj[property];
+    });
+};
 
 /** _.every
 * Arguments:
