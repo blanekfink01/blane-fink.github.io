@@ -163,7 +163,17 @@ _.contains = (arr, val) => {
 *   _.each(["a","b","c"], function(e,i,a){ console.log(e)});
 *      -> should log "a" "b" "c" to the console
 */
-
+_.each = (coll, func) => {
+    if (Array.isArray(coll)) { // coll === array
+        for (let i = 0; i < coll.length; i++) {
+            func(coll[i], i, coll);
+        }
+    } else { // coll === object
+        for (let key in coll) {
+            func(coll[key], key, coll);
+        }
+    }
+};
 
 /** _.unique
 * Arguments:
