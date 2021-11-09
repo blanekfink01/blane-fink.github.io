@@ -184,7 +184,23 @@ _.each = (coll, func) => {
 * Examples:
 *   _.unique([1,2,2,4,5,6,5,2]) -> [1,2,4,5,6]
 */
-
+_.unique = (arr) => {
+    const uniqVal = [];
+    _.each(arr, (val, i, arr) => {
+        // all vals of arr
+        let isUniq = true;
+        // test against all shits in uniqVal
+        _.each(uniqVal, (val1, i1, arr1) => {
+            if (val === val1) {
+                isUniq = false;
+            }
+        });
+        if (isUniq) {
+            uniqVal.push(val);
+        }
+    }); 
+    return uniqVal;
+};
 
 /** _.filter
 * Arguments:
