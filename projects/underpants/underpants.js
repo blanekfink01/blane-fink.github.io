@@ -295,7 +295,13 @@ _.partition = (arr, func) => {
 * Examples:
 *   _.map([1,2,3,4], function(e){return e * 2}) -> [2,4,6,8]
 */
-
+_.map = (coll, func) => {
+    const newArr = []
+    _.each(coll, (val, i, coll) => {
+        newArr.push(func(val, i, coll));
+    });
+    return newArr;
+}
 
 /** _.pluck
 * Arguments:
