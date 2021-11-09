@@ -217,7 +217,15 @@ _.unique = (arr) => {
 * Extra Credit:
 *   use _.each in your implementation
 */
-
+_.filter = (arr, func) => {
+    const tru = [];
+    _.each(arr, (val, i, ar) => {
+        if (func(val, i, ar)) {
+            tru.push(val);
+        }
+    });
+    return tru;
+};
 
 /** _.reject
 * Arguments:
