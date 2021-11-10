@@ -151,8 +151,28 @@ function nth(list, n) { // n = 0
 // deepEqual ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function deepEqual() {
+function deepEqual(val1, val2) {
+  // if simple data type, return === comparison, else, ...
+  if (typeof val1 !== 'object' && typeof val2 !== 'object') {
+    return val1 === val2;
+  }
+  if (val1 === null || val2 === null) {
+    return false;
+  }
+  // 
+  const keys1 = Object.keys(val1);
+  const keys2 = Object.keys(val2);
+  if (keys1.length !== keys2.length) { // are they the same length?
+    return false;
+  }
+  for (let i = 0; i < keys1.length; i++) { // are all the keys identical?
+    if (!keys2.includes(keys1[i]) || !deepEqual(val1[keys1[i]], val2[keys2[i]])) {
+      return false;
+    }
+  }
 
+
+  return true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
