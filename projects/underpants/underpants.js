@@ -414,7 +414,6 @@ _.some = (coll, func) => {
 *   _.reduce([1,2,3], function(previousSum, currentValue, currentIndex){ return previousSum + currentValue }, 0) -> 6
 */
 _.reduce = (arr, func, seed, i = 0) => { // If no <seed> was given, use the first element/value of <collection> as <seed> and continue to the next element
-    console.log('shittyasscakes', arr, func, seed);
     // Use the return value of <function> as the "previous result" for the next iteration
     if (seed === undefined) {
         seed = arr[0];
@@ -442,7 +441,13 @@ _.reduce = (arr, func, seed, i = 0) => { // If no <seed> was given, use the firs
 *   _.extend(data, {b:"two"}); -> data now equals {a:"one",b:"two"}
 *   _.extend(data, {a:"two"}); -> data now equals {a:"two"}
 */
-
+_.extend = (obj1, obj2) => {
+    // takes in an infinite amount of objects
+    for (let key in obj2) {
+        delete obj1[key];
+        obj1[key] = obj2[key];
+    }
+};
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
