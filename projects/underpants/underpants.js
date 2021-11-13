@@ -441,12 +441,21 @@ _.reduce = (arr, func, seed, i = 0) => { // If no <seed> was given, use the firs
 *   _.extend(data, {b:"two"}); -> data now equals {a:"one",b:"two"}
 *   _.extend(data, {a:"two"}); -> data now equals {a:"two"}
 */
-_.extend = (obj1, obj2) => {
+_.extend = (obj1, obj2, obj3) => {
     // takes in an infinite amount of objects
+    console.log()
     for (let key in obj2) {
         delete obj1[key];
         obj1[key] = obj2[key];
     }
+    if (obj3 !== undefined) {
+        for (let key in obj3) {
+            delete obj1[key];
+            obj1[key] = obj3[key];
+        }
+        
+    }
+    return obj1;
 };
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
