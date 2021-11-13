@@ -376,7 +376,24 @@ _.every = (coll, func) => {
 *   _.some([1,3,5], function(e){return e % 2 === 0}) -> false
 *   _.some([1,2,3], function(e){return e % 2 === 0}) -> true
 */
-
+_.some = (coll, func) => {
+    // if one thing is true return true
+    let bool = false;
+    if (typeof func === 'function') {
+        _.each(coll, (el, i, coll) => {
+            if (func(el, i, coll)) {
+                return bool = true;
+            }
+        });
+    } else {
+        _.each(coll, (el, i, coll) => {
+            if (el) {
+                return bool = true;
+            }
+        });
+    }
+    return bool;
+};
 
 /** _.reduce
 * Arguments:
