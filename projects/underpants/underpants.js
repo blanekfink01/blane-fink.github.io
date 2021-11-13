@@ -341,6 +341,19 @@ _.pluck = (arrOfObj, property) => {
 */
 _.every = (coll, func) => {
     // i need to plan every step of this with pseudocode before coding
+    // call func on every el of coll
+    // if at the end of the  collection and the return is not false return true
+    let everyVal = true;
+    // iterate trhough coll 
+    _.each(coll, (el, i, coll) => {
+        // console.log('each vars', el, i, coll)
+        if (typeof func === 'function' && !func(el, i, coll)) { // if func is a function use it
+            everyVal = false;
+        } else if (!el) { // else base on truthiness
+            everyVal = false;
+        }
+    });
+    return everyVal;
 };
 
 /** _.some
