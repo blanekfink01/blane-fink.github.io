@@ -413,7 +413,20 @@ _.some = (coll, func) => {
 * Examples:
 *   _.reduce([1,2,3], function(previousSum, currentValue, currentIndex){ return previousSum + currentValue }, 0) -> 6
 */
-
+_.reduce = (arr, func, seed, i = 0) => { // If no <seed> was given, use the first element/value of <collection> as <seed> and continue to the next element
+    console.log('shittyasscakes', arr, func, seed);
+    // Use the return value of <function> as the "previous result" for the next iteration
+    if (seed === undefined) {
+        seed = arr[0];
+        i++;
+    }
+    let prevResultForNextIteration = func(seed, arr[i], i);
+    i++; // prep i for next recursive call
+    if (i === arr.length) {
+        return prevResultForNextIteration;
+    }
+    return _.reduce(arr, func, prevResultForNextIteration, i);
+};
 
 /** _.extend
 * Arguments:
